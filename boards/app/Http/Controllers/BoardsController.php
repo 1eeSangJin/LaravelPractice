@@ -19,7 +19,7 @@ class BoardsController extends Controller
     public function index()
     {
         //
-        return __METHOD__;
+        return "로그인 성공하셨습니다";
     }
 
     /**
