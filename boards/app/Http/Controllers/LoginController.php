@@ -40,6 +40,6 @@ class LoginController extends Controller
             return back()->withInput();
         }
 
-        return redirect()->intended('bbs');
+        return view('main');
     }
 }
