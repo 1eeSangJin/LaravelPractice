@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = 'sessions.create';
 
     /**
      * Create a new controller instance.
@@ -40,6 +40,7 @@ class LoginController extends Controller
 
     public function logout(){
         Auth::logout();
+
         return redirect()->route('sessions.create');
     }
 }

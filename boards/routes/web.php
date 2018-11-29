@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('main', function(){
     return view('main');
-});
+})->name('main');
 
 Auth::routes();
 
@@ -49,3 +49,7 @@ Route::post('auth/reset', ['as' => 'reset.store', 'uses' => 'PasswordsController
 /* 이메일 */
 Route::get('auth/confirm/{code}', ['as'=>'users.confirm', 'uses'=>'UsersController@confirm'])->where('code', '[\pL-\pN]{60}');
 
+/* Socialite */
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+
+Route::get('/callback', 'SocialAuthGoogleController@callback');
