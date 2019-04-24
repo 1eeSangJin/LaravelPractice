@@ -1,1 +1,2 @@
 # LaravelSubject
+Laravelを勉強しながら実習した掲示板
